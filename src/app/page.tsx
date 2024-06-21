@@ -1,95 +1,34 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { PageHeader } from "./partials/page-header";
+import { Box, Container, Heading, Stack, Text } from "@chakra-ui/react";
+import { PageForm } from "./partials/page-form";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    <>
+      <PageHeader />
+      <Box as="section" padding="60px 0" background="#FEFEFE">
+        <Container maxW="920px">
+          <Stack textAlign="center" color="#000000" gap={7} lineHeight={1.4}>
+            <Heading lineHeight={1.2}>
+              Become an Influencer For
+              <br />
+              Breakaway x Mifu
+            </Heading>
+            <Stack gap={4} fontSize={18}>
+              <Text>
+                Whether you&apos;re the person with the most likes or followers on campus, or a hard-worker looking to
+                build your network and gain marketing experience, we want to HEAR from you.
+              </Text>
+              <Text>
+                Becoming a part of the Breakaway Influencer and Ambassador team is pretty simple. Just apply by
+                selecting your preferred market below. Complete your application and attach your Instagram handle for a
+                chance to be considered!
+              </Text>
+            </Stack>
+          </Stack>
+          <PageForm />
+        </Container>
+      </Box>
+    </>
   );
 }
